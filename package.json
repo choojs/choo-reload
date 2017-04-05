@@ -1,0 +1,28 @@
+{
+  "name": "choo-reload",
+  "description": "Livereloading package for choo",
+  "repository": "yoshuawuyts/choo-reload",
+  "version": "1.0.0",
+  "scripts": {
+    "deps": "dependency-check . && dependency-check . --extra --no-dev",
+    "start": "node .",
+    "test": "standard && npm run deps",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov"
+  },
+  "dependencies": {
+    "nanologger": "^1.0.2"
+  },
+  "devDependencies": {
+    "dependency-check": "^2.8.0",
+    "nyc": "^10.2.0",
+    "standard": "^9.0.2",
+    "tape": "^4.6.3"
+  },
+  "keywords": [
+    "choo",
+    "bankai",
+    "reload",
+    "hot-module-reloading",
+    "live"
+  ]
+}
