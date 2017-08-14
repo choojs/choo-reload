@@ -2,10 +2,11 @@ var logger = require('nanologger')
 
 module.exports = reload
 
-function reload () {
+function reload (url) {
+  url = url || 'sse'
   return function (state, emitter) {
     var log = logger('sse')
-    var source = new window.EventSource('sse')
+    var source = new window.EventSource(url)
 
     source.addEventListener('open', function () {
       log.info('connected')
