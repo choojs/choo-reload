@@ -21,8 +21,8 @@ all handlers is tricky - but perhaps we'll eventually get around to solving
 this (probably major version). Until then: here's the second best thing.
 
 ## API
-### `reload()`
-Create a new instance of reload.
+### `reload([url])`
+Create a new instance of reload. `url` defaults to `sse`.
 
 ## License
 [MIT](https://tldrlegal.com/license/mit-license)
