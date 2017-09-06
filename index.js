@@ -3,7 +3,7 @@ var logger = require('nanologger')
 module.exports = reload
 
 function reload (url) {
-  url = url || 'sse'
+  url = url || '/sse'
   return function (state, emitter) {
     var log = logger('sse')
     var source = new window.EventSource(url)
