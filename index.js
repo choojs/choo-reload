@@ -5,6 +5,8 @@ module.exports = reload
 function reload (url) {
   url = url || '/sse'
   return function (state, emitter) {
+    if (typeof window === 'undefined') return
+
     var log = logger('sse')
     var source = new window.EventSource(url)
 
